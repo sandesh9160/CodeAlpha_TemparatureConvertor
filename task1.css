@@ -1,0 +1,33 @@
+.celcius-input-styling{
+    background-color: white;
+    border-radius: 30px;
+    border-color: black;
+    height: 60px;
+    width: 250px;
+    margin-left: 100px;
+}
+.c-heading{
+    font-size: 40px;
+    color:rgb(0, 0, 0);
+    font-weight: 500;
+    font-family: Cambria;
+}
+.main-heading-temp{
+    color: rgb(7, 245, 221);
+    font-size: 42px;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: rgba(105, 9, 239, 0.833);
+    padding: 5px;
+    height: 55px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+
+}
+.bg-image-temp{
+    background-image: url("https://media.istockphoto.com/id/1302292713/vector/cold-snap-temperature-measurment-scale.jpg?s=612x612&w=0&k=20&c=FTmcMZVK3vhK4MQ8jenxg3BWDu8VeqwU-tQjIiQzaeM=");
+    background-size: cover;
+    height: 100vh;
+}

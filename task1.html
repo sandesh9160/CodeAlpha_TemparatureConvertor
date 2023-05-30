@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha_Task1</title>
+    <link rel="stylesheet" href="task1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        
+</head>
+
+<body>
+    
+    <div class="bg-image-temp">
+        <div class="main-heading-temp">
+            <h1>
+                <marquee direction="right">TEMPERATURE CONVERTER</marquee>
+            </h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div>
+                        <label for="celciusFor"><span class="c-heading ">Celcius:</span></label> &nbsp; &nbsp;
+                        <input type="number" placeholder="Enter Here" class="celcius-input-styling mr-5" id="celciusFor">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div>
+                        <label for="fahrenheitFor"><span class="c-heading ">Fahrenheit:</span></label> &nbsp; &nbsp;
+                        <input type="number" placeholder="Enter Here" class="celcius-input-styling mr-5" id="fahrenheitFor">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div>
+                        <label for="kelvinFor"><span class="c-heading">Kelvin:</span></label> &nbsp; &nbsp;
+                        <input type="number" placeholder="Enter Here" class="celcius-input-styling mr-5" id="kelvinFor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let CelciusElement=document.getElementById("celciusFor");
+            let farenheitElement=document.getElementById("fahrenheitFor");
+            let kelvinElement=document.getElementById("kelvinFor");
+            CelciusElement.oninput=()=>{
+                let ctemp=parseFloat(CelciusElement.value);
+                let ftemp=(ctemp*(9/5))+32;
+                let ktemp=(ctemp+273.15);
+                farenheitElement.value=(ftemp.toFixed(2));
+                kelvinElement.value=(ktemp.toFixed(2))
+
+            };
+            farenheitElement.oninput=()=>{
+                let ftemp=parseFloat(farenheitElement.value);
+                let ctemp=(ftemp-32)*(5/9);
+                let ktemp=(ftemp-32)*(5/9)+273.15;
+                CelciusElement.value=(ctemp.toFixed(2));
+                kelvinElement.value=(ktemp.toFixed(2))
+            };
+            kelvinElement.oninput=()=>{
+                let ktemp=parseFloat(kelvinElement.value);
+                let ctemp=ktemp-273.15;
+                let ftemp=(ktemp-273.15)*(9/5)+32;
+                CelciusElement.value=(ctemp.toFixed(2));
+                farenheitElement.value=(ftemp.toFixed(2))
+            };
+</script>
+</body>
+
+</html>
